@@ -18,20 +18,21 @@ class TodoList:
 
         # Returns:
         #   A list of Todo instances representing the todos that are not complete
-        pass
+
 
     def complete(self):
         return [task for task in self.list_of_todos if task.complete]
         # Returns:
         #   A list of Todo instances representing the todos that are complete
-        pass
 
     def give_up(self):
+        for item in self.list_of_todos:
+            item.mark_complete()
         # Returns:
         #   Nothing
         # Side-effects:
         #   Marks all todos as complete
-        pass
+        
 
 
 # File: lib/todo.py
@@ -48,7 +49,7 @@ class Todo:
         # Side-effects:
         #   Sets the task property
         #   Sets the complete property to False
-        pass
+
 
     def mark_complete(self):
         self.complete = True
@@ -56,4 +57,4 @@ class Todo:
         #   Nothing
         # Side-effects:
         #   Sets the complete property to True
-        pass
+    
